@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <Filter Include="CJsonObject">
+            <UniqueIdentifier>{E16AB501-6F43-4D7F-938E-1231BEB428B3}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="CodeGen">
+            <UniqueIdentifier>{A5628151-187F-4A75-B23F-6397ACFF9E2B}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="Common">
+            <UniqueIdentifier>{3DD7E897-A63D-4DB9-9827-4FD41ECEBF80}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="JobSystem">
+            <UniqueIdentifier>{048CB2B6-CC47-49AD-85CE-26809873C633}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="SceneExport">
+            <UniqueIdentifier>{3D5062A1-F2F6-49FA-9120-B068138BA741}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="TinyXML">
+            <UniqueIdentifier>{373B62FD-81EC-4E70-8D68-54D0D45FD653}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="Utility">
+            <UniqueIdentifier>{FB75E21F-909F-41A8-819C-813E87C51B1B}</UniqueIdentifier>
+        </Filter>
+        <Filter Include="Common\DXMath">
+            <UniqueIdentifier>{7B410A1B-293D-4E04-8B8B-8CD4AEF38E24}</UniqueIdentifier>
+        </Filter>
+    </ItemGroup>
+    <ItemGroup>
+        <ClCompile Include="CJsonObject\cJSON.cpp">
+            <Filter>CJsonObject</Filter>
+        </ClCompile>
+        <ClCompile Include="CJsonObject\CJsonObject.cpp">
+            <Filter>CJsonObject</Filter>
+        </ClCompile>
+        <ClCompile Include="CodeGen\JsonCompiler.cpp">
+            <Filter>CodeGen</Filter>
+        </ClCompile>
+        <ClCompile Include="Common\d3dUtil.cpp">
+            <Filter>Common</Filter>
+        </ClCompile>
+        <ClCompile Include="Common\MObject.cpp">
+            <Filter>Common</Filter>
+        </ClCompile>
+        <ClCompile Include="Common\vengine_library.cpp">
+            <Filter>Common</Filter>
+        </ClCompile>
+        <ClCompile Include="JobSystem\JobBucket.cpp">
+            <Filter>JobSystem</Filter>
+        </ClCompile>
+        <ClCompile Include="JobSystem\JobNode.cpp">
+            <Filter>JobSystem</Filter>
+        </ClCompile>
+        <ClCompile Include="JobSystem\JobSystem.cpp">
+            <Filter>JobSystem</Filter>
+        </ClCompile>
+        <ClCompile Include="SceneExport\MiJson.cpp">
+            <Filter>SceneExport</Filter>
+        </ClCompile>
+        <ClCompile Include="SceneExport\MiTextureFileExport.cpp">
+            <Filter>SceneExport</Filter>
+        </ClCompile>
+        <ClCompile Include="TinyXML\tinystr.cpp">
+            <Filter>TinyXML</Filter>
+        </ClCompile>
+        <ClCompile Include="TinyXML\tinyxml.cpp">
+            <Filter>TinyXML</Filter>
+        </ClCompile>
+        <ClCompile Include="TinyXML\tinyxmlerror.cpp">
+            <Filter>TinyXML</Filter>
+        </ClCompile>
+        <ClCompile Include="TinyXML\tinyxmlparser.cpp">
+            <Filter>TinyXML</Filter>
+        </ClCompile>
+        <ClCompile Include="Utility\FileUtility.cpp">
+            <Filter>Utility</Filter>
+        </ClCompile>
+        <ClCompile Include="Utility\MathLib.cpp">
+            <Filter>Utility</Filter>
+        </ClCompile>
+        <ClCompile Include="Utility\MGuid.cpp">
+            <Filter>Utility</Filter>
+        </ClCompile>
+        <ClCompile Include="Utility\Path.cpp">
+            <Filter>Utility</Filter>
+        </ClCompile>
+        <ClCompile Include="Utility\Random.cpp">
+            <Filter>Utility</Filter>
+        </ClCompile>
+        <ClCompile Include="Utility\StringUtility.cpp">
+            <Filter>Utility</Filter>
+        </ClCompile>
+        <ClCompile Include="Utility\TaskThread.cpp">
+            <Filter>Utility</Filter>
+        </ClCompile>
+        <ClCompile Include="Utility\ThreadResetEvent.cpp">
+            <Filter>Utility</Filter>
+        </ClCompile>
+    </ItemGroup>
+    <ItemGroup>
+        <ClInclude Include="CJsonObject\cJSON.h">
+            <Filter>CJsonObject</Filter>
+        </ClInclude>
+        <ClInclude Include="CodeGen\JsonCompiler.h">
+            <Filter>CodeGen</Filter>
+        </ClInclude>
+        <ClInclude Include="CodeGen\SerializeStruct.h">
+            <Filter>CodeGen</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\BinaryLinkedAllocator.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\BitArray.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\BitVector.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\CommonInclude.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\d3dx12.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\DLL.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\DXMath\Common.h">
+            <Filter>Common\DXMath</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\DXMath\DXMath.h">
+            <Filter>Common\DXMath</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\DXMath\Matrix3.h">
+            <Filter>Common\DXMath</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\DXMath\Matrix4.h">
+            <Filter>Common\DXMath</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\DXMath\Quaternion.h">
+            <Filter>Common\DXMath</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\DXMath\Scalar.h">
+            <Filter>Common\DXMath</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\DXMath\Transform.h">
+            <Filter>Common\DXMath</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\DXMath\Vector.h">
+            <Filter>Common\DXMath</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\DynamicDLL.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\Hash.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\HashMap.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\HashMultiMap.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\HashPicker.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\LinkedList.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\Memory.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\MetaLib.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\MObject.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\Pool.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\RandomVector.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\RingQueue.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\Runnable.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\TypeWiper.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\vector.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="Common\vstring.h">
+            <Filter>Common</Filter>
+        </ClInclude>
+        <ClInclude Include="JobSystem\ConcurrentQueue.h">
+            <Filter>JobSystem</Filter>
+        </ClInclude>
+        <ClInclude Include="JobSystem\JobBucket.h">
+            <Filter>JobSystem</Filter>
+        </ClInclude>
+        <ClInclude Include="JobSystem\JobHandle.h">
+            <Filter>JobSystem</Filter>
+        </ClInclude>
+        <ClInclude Include="JobSystem\JobInclude.h">
+            <Filter>JobSystem</Filter>
+        </ClInclude>
+        <ClInclude Include="JobSystem\JobNode.h">
+            <Filter>JobSystem</Filter>
+        </ClInclude>
+        <ClInclude Include="JobSystem\JobSystem.h">
+            <Filter>JobSystem</Filter>
+        </ClInclude>
+        <ClInclude Include="SceneExport\ExportType.h">
+            <Filter>SceneExport</Filter>
+        </ClInclude>
+        <ClInclude Include="SceneExport\MiJson.h">
+            <Filter>SceneExport</Filter>
+        </ClInclude>
+        <ClInclude Include="SceneExport\MiTextureFileExport.h">
+            <Filter>SceneExport</Filter>
+        </ClInclude>
+        <ClInclude Include="TinyXML\tinystr.h">
+            <Filter>TinyXML</Filter>
+        </ClInclude>
+        <ClInclude Include="TinyXML\tinyxml.h">
+            <Filter>TinyXML</Filter>
+        </ClInclude>
+        <ClInclude Include="Utility\FileUtility.h">
+            <Filter>Utility</Filter>
+        </ClInclude>
+        <ClInclude Include="Utility\MathLib.h">
+            <Filter>Utility</Filter>
+        </ClInclude>
+        <ClInclude Include="Utility\MGuid.h">
+            <Filter>Utility</Filter>
+        </ClInclude>
+        <ClInclude Include="Utility\Path.h">
+            <Filter>Utility</Filter>
+        </ClInclude>
+        <ClInclude Include="Utility\Random.h">
+            <Filter>Utility</Filter>
+        </ClInclude>
+        <ClInclude Include="Utility\StringUtility.h">
+            <Filter>Utility</Filter>
+        </ClInclude>
+        <ClInclude Include="Utility\TaskThread.h">
+            <Filter>Utility</Filter>
+        </ClInclude>
+        <ClInclude Include="Utility\ThreadResetEvent.h">
+            <Filter>Utility</Filter>
+        </ClInclude>
+        <ClInclude Include="CJsonObject\CJsonObject.hpp">
+            <Filter>CJsonObject</Filter>
+        </ClInclude>
+    </ItemGroup>
+</Project>

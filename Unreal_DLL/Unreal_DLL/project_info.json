@@ -1,0 +1,66 @@
+{
+    "VCXProj": {
+        "FileTypes": [
+            {
+                ".c": "ClCompile"
+            },
+            {
+                ".cpp": "ClCompile"
+            },
+            {
+                ".h": "ClInclude"
+            },
+            {
+                ".hpp": "ClInclude"
+            },
+            {
+                ".dll": "None"
+            },
+            {
+                ".lib": "Library"
+            }
+        ],
+        "IgnoreFolder": [
+            "x64",
+            "x86",
+            ".vs",
+            "Resource",
+            "Shaders",
+            "Doc"
+        ]
+    },
+    "Filter": {
+        "Path": "Unreal_DLL.vcxproj.filters",
+        "Descriptors": [
+            "ClInclude",
+            "ClCompile",
+            "None",
+            "Library"
+        ],
+        "RootPath": ""
+    },
+    "FolderCopy": {
+        "CopyFolderSource": "",
+        "CopyFolderDest": "../../MEngine_Unreal/Plugins/VEngineDLL/Source/VEngineDLL/ThirdParty/Header",
+        "CopyExtensions": [
+            ".h",
+            ".hpp"
+        ],
+        "CopyExclusiveFolder": [
+            "Debug",
+            "x64",
+            "x86"
+        ]
+    },
+    "FilesCopy": [
+        {
+            "../x64/Release/Unreal_DLL.dll": "../../MEngine_Unreal/Plugins/VEngineDLL/Source/VEngineDLL/ThirdParty/Unreal_DLL.dll"
+        },
+        {
+            "../x64/Release/Unreal_DLL.lib": "../../MEngine_Unreal/Plugins/VEngineDLL/Source/VEngineDLL/ThirdParty/Unreal_DLL.lib"
+        },
+        {
+            "../x64/Release/Unreal_DLL.dll": "../../MEngine_Unreal/Plugins/VEngineDLL/Binaries/Win64/Unreal_DLL.dll"
+        }
+    ]
+}

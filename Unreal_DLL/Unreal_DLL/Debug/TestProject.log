@@ -1,0 +1,36 @@
+﻿  vengine_library.cpp
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(27,3): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(27,3): message : 此诊断出现在编译器生成的函数“void StackObject<T,false>::New(Args &&...) noexcept”中
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(88): message : 查看对正在编译的 类 模板 实例化“StackObject<T,false>”的引用
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(33,3): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(33,3): message : 此诊断出现在编译器生成的函数“void StackObject<T,false>::InPlaceNew(Args &&...) noexcept”中
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(46,3): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(231,43): error C2760: 语法错误: 意外标记 ","，应为 ";"
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(237,43): error C2039: "remove_cvref_t": 不是 "std" 的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\mutex(30): message : 参见“std”的声明
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(283,26): error C2039: "remove_cvref_t": 不是 "std" 的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\mutex(30): message : 参见“std”的声明
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(283,1): error C2065: “remove_cvref_t”: 未声明的标识符
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(283,45): error C2065: “a”: 未声明的标识符
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(283,48): error C2275: “int32_t”: 将此类型用作表达式非法
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\stdint.h(20): message : 参见“int32_t”的声明
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(283,56): error C2146: 语法错误: 缺少“)”(在标识符“p”的前面)
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(284,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(284,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(312,39): error C2039: "remove_cvref_t": 不是 "std" 的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\mutex(30): message : 参见“std”的声明
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(312,1): error C2065: “remove_cvref_t”: 未声明的标识符
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(312,58): error C2065: “a”: 未声明的标识符
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(312,1): error C2988: 不可识别的模板声明/定义
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(312,1): error C2059: 语法错误:“const”
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(313,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(313,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(340,56): error C2039: "remove_cvref_t": 不是 "std" 的成员
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\mutex(30): message : 参见“std”的声明
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(340,1): error C2065: “remove_cvref_t”: 未声明的标识符
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(340,34): error C2974: 'std::remove_pointer_t' : 模板 对于 '_Ty'是无效参数，应为类型
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\type_traits(294): message : 参见“std::remove_pointer_t”的声明
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(340,1): error C2062: 意外的类型“unknown-type”
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\MetaLib.h(343,1): error C2631: “Type”: 别名模板中不能定义类或枚举
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\Pool.h(262,46): error C2059: 语法错误:“)”
+C:\Users\yuefeng.geng\source\repos\TestProject\TestProject\Common\vengine_library.cpp(320,1): fatal error C1004: 发现意外的文件尾

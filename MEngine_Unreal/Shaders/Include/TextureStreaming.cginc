@@ -1,0 +1,12 @@
+#ifndef TEXTURE_STREAMING_INCLUDE
+#define TEXTURE_STREAMING_INCLUDE
+
+#define TEXPACK_CAPACITY 5
+
+struct TexturePack
+{
+	int tex[TEXPACK_CAPACITY];
+};
+
+
+#endif
