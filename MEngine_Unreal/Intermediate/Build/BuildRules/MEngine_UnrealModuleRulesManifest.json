@@ -1,0 +1,10 @@
+{
+	"SourceFiles": [
+		"D:\\WorkProject\\VirtualEngine\\MEngine_Unreal\\Source\\MEngine_Unreal\\MEngine_Unreal.Build.cs",
+		"D:\\WorkProject\\VirtualEngine\\MEngine_Unreal\\Plugins\\MiTool\\Source\\MiTool\\MiTool.Build.cs",
+		"D:\\WorkProject\\VirtualEngine\\MEngine_Unreal\\Plugins\\VEngineDLL\\Source\\VEngineDLL\\VEngineDLL.Build.cs",
+		"D:\\WorkProject\\VirtualEngine\\MEngine_Unreal\\Source\\MEngine_Unreal.Target.cs",
+		"D:\\WorkProject\\VirtualEngine\\MEngine_Unreal\\Source\\MEngine_UnrealEditor.Target.cs"
+	],
+	"EngineVersion": "4.25.3"
+}

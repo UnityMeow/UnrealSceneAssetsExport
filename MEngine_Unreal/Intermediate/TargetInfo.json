@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "MEngine_Unreal",
+			"Path": "D:\\WorkProject\\VirtualEngine\\MEngine_Unreal\\Source\\MEngine_Unreal.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "MEngine_UnrealEditor",
+			"Path": "D:\\WorkProject\\VirtualEngine\\MEngine_Unreal\\Source\\MEngine_UnrealEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

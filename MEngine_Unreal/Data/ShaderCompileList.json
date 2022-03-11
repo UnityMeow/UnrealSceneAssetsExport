@@ -1,0 +1,9 @@
+{
+	"shader": {
+	},
+	"compute": {
+		"BC6Compress" : "Shaders/CompileResult/BC6Compress.compute.cso",
+		"BC7Compress" : "Shaders/CompileResult/BC7Compress.compute.cso",
+		"Read" : "Shaders/CompileResult/ReadCubemap.compute.cso"
+	}
+}
