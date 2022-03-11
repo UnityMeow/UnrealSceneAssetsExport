@@ -1,0 +1,11 @@
+#ifndef __DEFINE__INCLUDE_HEADER
+#define __DEFINE__INCLUDE_HEADER
+#define XRES 32
+#define YRES 16
+#define ZRES 64
+#define VOXELZ 64
+#define MAXLIGHTPERCLUSTER 128
+#define FROXELRATE 1.2
+#define CLUSTERRATE 1.5
+#define VOXELSIZE uint3(XRES, YRES, ZRES)
+#endif

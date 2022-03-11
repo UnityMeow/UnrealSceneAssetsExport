@@ -1,0 +1,24 @@
+cbuffer Params : register(b0)
+
+TextureCube<float4> _MainTex : register(t0);
+Texture2D<float4> _MainTex2D : register(t1);
+Texture2D<uint> _UIntTexture : register(t2);
+Texture2D<uint2> _UInt2Texture : register(t3);
+Texture2D<uint4> _UInt4Texture : register(t4);
+Texture3D<float4> _VoxelTex : register(t5);
+StructuredBuffer<float4> _UploadBuffer : register(t6);
+
+RWStructuredBuffer<float4> _ResultBuffer : register(u0);
+RWStructuredBuffer<uint> _ResultInt1Buffer : register(u1);
+RWStructuredBuffer<uint2> _ResultInt2Buffer : register(u2);
+RWStructuredBuffer<uint4> _ResultInt4Buffer : register(u3);
+RWTexture2D<float4> _DestTex : register(u4);
+RWTexture2D<float4> _OutputTexs[7] : register(u0, space1);
+
+#pragma TexCopy
+#pragma IntTexCopy UINT_INPUT
+#pragma IntTexCopy UINT2_INPUT
+#pragma IntTexCopy UINT4_INPUT
+#pragma TexCopyNormal
+#pragma GenerateMip
+#pragma UploadTex

@@ -1,0 +1,95 @@
+#include "Include/Sampler.cginc"
+cbuffer Params : register(b0)
+{
+    uint4 _TextureSize;
+    uint _Count;
+    uint _TargetMipLevel;
+};
+
+TextureCube<float4> _MainTex : register(t0);
+Texture2D<float4> _MainTex2D : register(t1);
+Texture2D<uint> _UIntTexture : register(t2);
+Texture2D<uint2> _UInt2Texture : register(t3);
+Texture2D<uint4> _UInt4Texture : register(t4);
+Texture3D<float4> _VoxelTex : register(t5);
+StructuredBuffer<float4> _UploadBuffer : register(t6);
+
+RWStructuredBuffer<float4> _ResultBuffer : register(u0);
+RWStructuredBuffer<uint> _ResultInt1Buffer : register(u1);
+RWStructuredBuffer<uint2> _ResultInt2Buffer : register(u2);
+RWStructuredBuffer<uint4> _ResultInt4Buffer : register(u3);
+RWTexture2D<float4> _DestTex : register(u4);
+RWTexture2D<float4> _OutputTexs[7] : register(u0, space1);
+
+float3 UnpackNormal(float4 tex)
+{
+    float2 xy = tex.xy * tex.w;
+    xy = xy * 2 - 1;
+    float z = sqrt(1 - dot(xy,xy));
+    return float3(xy, z);   
+}
+[numthreads(8, 8, 1)]
+void TexCopy(uint2 id : SV_DISPATCHTHREADID)
+{
+    if(id.x >= _TextureSize.x || id.y >= _TextureSize.y)
+    return;
+    _ResultBuffer[id.y * _Count + id.x] = _MainTex2D.Load(uint3(id.x, id.y,  _TargetMipLevel));
+}
+
+[numthreads(8, 8, 1)]
+void IntTexCopy(uint2 id : SV_DISPATCHTHREADID)
+{
+    if(any(id.xy >= _TextureSize.xy))
+    return;
+    #ifdef UINT_INPUT
+        _ResultInt1Buffer[id.y * _Count + id.x] = _UIntTexture.Load(uint3(id.x, id.y, 0));
+    #endif
+    #ifdef UINT2_INPUT
+        _ResultInt2Buffer[id.y * _Count + id.x] = _UInt2Texture.Load(uint3(id.x, id.y, 0));
+    #endif
+    #ifdef UINT4_INPUT
+        _ResultInt4Buffer[id.y * _Count + id.x] = _UInt4Texture.Load(uint3(id.x, id.y, 0));
+    #endif
+}
+
+[numthreads(8, 8, 1)]
+void TexCopyNormal(uint2 id : SV_DISPATCHTHREADID)
+{
+    if(id.x >= _TextureSize.x || id.y >= _TextureSize.y)
+    return;
+    _ResultBuffer[id.y * _Count + id.x] = float4(UnpackNormal(_MainTex2D.Load(uint3(id.x, id.y,  _TargetMipLevel))).xy * 0.5 + 0.5, 0, 0);
+}
+
+[numthreads(32,32,1)]
+void GenerateMip(uint2 id : SV_GROUPID, uint2 groupID : SV_GROUPTHREADID)
+{
+    uint2 dispatchID = 0;
+    uint2 avaliableElement = 32;
+    bool stillEnabled = true;
+    [loop]
+    for(uint i = 0; i < _TargetMipLevel; ++i)
+    {
+        [branch]
+        if(stillEnabled){
+            dispatchID = id * avaliableElement + groupID;
+            _OutputTexs[i + 1][dispatchID] =( 
+            _OutputTexs[i][dispatchID * 2] + _OutputTexs[i][dispatchID * 2 + uint2(0, 1)] +
+            _OutputTexs[i][dispatchID * 2 + uint2(1, 0)] + _OutputTexs[i][dispatchID * 2 + uint2(1, 1)]) * 0.25;
+            avaliableElement /= 2;
+            if(groupID.x >= avaliableElement.x || groupID.y >= avaliableElement.y) 
+            {
+                stillEnabled = false;
+            }
+        }
+        AllMemoryBarrierWithGroupSync();
+    }
+}
+[numthreads(8, 8, 1)]
+void UploadTex(uint2 id : SV_DISPATCHTHREADID)
+{
+    if(id.x >= _TextureSize.x || id.y >= _TextureSize.y)
+    return;
+    float2 uv = float2(id + 0.5) / _TextureSize;
+    float dist = saturate(length(abs(uv - 0.5)));
+    _DestTex[id] = _UploadBuffer[id.y * _TextureSize.x + id.x];
+}

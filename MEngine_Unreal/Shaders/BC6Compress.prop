@@ -1,0 +1,8 @@
+cbuffer Params : register(b0)
+Texture2D<float4> g_Input : register(t0); 
+StructuredBuffer<uint4> g_InBuff : register(t1);
+RWStructuredBuffer<uint4> g_OutBuff : register(u0);
+
+#pragma TryModeG10CS
+#pragma TryModeLE10CS
+#pragma EncodeBlockCS

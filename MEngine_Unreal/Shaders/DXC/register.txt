@@ -1,0 +1,6 @@
+DXCSM: 6_1
+DXCPath: dxc.exe
+FXCSM: 5_1
+FXCPath: fxc.exe
+Compilerusage: fxc
+TempFolder: 
